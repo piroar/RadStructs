@@ -1,7 +1,6 @@
 /*I'm looking to insert malloc in Stack_init, so the user won't have to do this himself*/
-//I'm also looking to insert a function that prints the entire stack and one that shows the top element
-//Lastly in the near future i will also build a SearchStack and a SortFunction function
-//Note: to this point the stack works only for integers
+//Lastly in the near future i will also build a SearchStack and a SortStack function
+//Note: to this point the stack works only for integers and with a static array
 struct RadStack
 {
     int a[5]; //Change the 5 with the size you want your stack to have
@@ -32,4 +31,20 @@ int Stack_pop(struct RadStack* r){             //use this function to delete an 
     }
     printf("Stack is empty");
     return -69;   //you can change with a number of your choice
+}
+
+int Stack_size(struct RadStack* r){            //use this function to check the size your stack has
+    return r->top+1;
+}
+
+int Stack_top(struct RadStack* r){             //use this function to check the top element of your stack
+    return r->a[r->top];
+}
+
+void Stack_print(struct RadStack* r){          
+/*use this function to print the stack with the top element(most recently inserted item) showed first(at the top) and the least recently inserted item showed last(at the bottom)*/
+    for (int i = 4; i >= 0; i--)
+    {
+        printf("%d\n",r->a[i]);
+    }
 }

@@ -11,11 +11,8 @@ int main(){
         Stack_push(r,i);   //the example uses this loop to insert items to the stack
         printf("done\n");
     }
-    for (i = 4; i >= 0; i--)
-    {
-        printf("%d\n",r->a[i]); //this loop shows the items thar are currently in the stack with
-        //the top element being at the top
-    }
+    printf("The Stack has size: %d with the top element being: %d\n",Stack_size(r),Stack_top(r));
+    Stack_print(r);
     for (i = 0; i < 5; i++)
     {
         item=Stack_pop(r); //the example uses this loop to delete items from the stacdk
