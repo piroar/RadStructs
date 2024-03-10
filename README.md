@@ -7,3 +7,5 @@ RadList (Linked List)
 RadTree (Binary Tree)
 RadHTable (Hash Table)
 Please note that more functions and features will be added on those structures in the near future.
+
+IMPORTANT:Every structure is contained in its corresponding header file named Rad*insert name of structure*, but i highly recommend checking the example files that show you how to use these functions
