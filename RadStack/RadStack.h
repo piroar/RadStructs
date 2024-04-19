@@ -4,15 +4,18 @@
 #include <stdlib.h>
 struct RadStack
 {
-    int a[5]; //Change the 5 with the size you want your stack to have
+    int *a; //Change the 5 with the size you want your stack to have
     int top;
 };
 
 int Stack_init(struct RadStack* r){            //use this function to initialize the Stack
     r->top=-1;
+    r->a=malloc(5*sizeof(int));
     return 0;
 }
-
+void Stack_destroy(struct RadStack* r){
+    free(r->a);
+}
 int Stack_push(struct RadStack* r, int item){  //use this function to insert an item in the Stack
     if (r->top<5) //same thing for this 5
     {

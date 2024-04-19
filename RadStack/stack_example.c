@@ -22,5 +22,6 @@ int main(){
         item=Stack_pop(r); //the example uses this loop to delete items from the stacdk
         if (item!=-1) printf("Item:%d\n",item);
     }
+    printf("Task Completed\n");
     return 0;
 }
